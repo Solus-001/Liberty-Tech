@@ -6,8 +6,11 @@ export const site = {
   pitch:
     "Professional PC, laptop and mobile services. Fast, honest repairs for Windows, Linux and mobile devices — no jargon, no nonsense.",
   phones: [
-    { display: "068 458 8896", href: "tel:+27684588896", wa: "27684588896" },
+    // Index 0 is the default WhatsApp destination: every waLink(phones[0].wa)
+    // and the nav button's visible label read from here. Keep 072 629 9531
+    // first so the label and the link can never disagree.
     { display: "072 629 9531", href: "tel:+27726299531", wa: "27726299531" },
+    { display: "068 458 8896", href: "tel:+27684588896", wa: "27684588896" },
   ],
   emails: ["maidenless.001@protonmail.com", "kea2tablet258@gmail.com"],
   whatsappPrefill:
