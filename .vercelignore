@@ -1,0 +1,15 @@
+# Never upload dependencies — Vercel runs `npm install --omit=dev` itself
+# (see vercel.json). node_modules is ~424 MB locally and would blow past the
+# 100 MB Hobby upload limit.
+node_modules
+
+.git
+.tanstack
+
+# QA output and local attachments — not source
+screenshots
+attachments
+artifacts
+
+# NOTE: .grok is deliberately NOT ignored. `scripts/with-app-env.mjs` reads
+# `.grok/app-env.json` during the build, so excluding it fails the deploy.
