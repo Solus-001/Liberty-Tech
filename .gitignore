@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.output/
+.vinxi/
+.tanstack/
+*.tsbuildinfo
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Deployment
+.vercel/
+
+# Platform-local state
+.node_modules.lock
+.project_id
+
+# QA / generated artifacts
+screenshots/
+artifacts/
+attachments/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Caches
+.cache/
+.eslintcache
+.vite/
+
+# OS
+.DS_Store
+Thumbs.db
