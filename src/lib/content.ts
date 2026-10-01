@@ -1,6 +1,5 @@
 export const site = {
   name: "Liberty Tech",
-  short: "LT TECH",
   byline: "By Ntokzin & Sweets",
   region: "South Africa",
   tagline: "Freedom of tech — or just use Linux.",
