@@ -103,6 +103,12 @@ export const services = [
   },
 ] as const;
 
+/** Shown when the customer cannot name the fault — a legitimate answer. */
+export const DIAGNOSE = "Not sure — please diagnose";
+
+/** Service picker in the contact form: the 8 services plus the opt-out. */
+export const serviceOptions = [DIAGNOSE, ...services.map((s) => s.name)] as const;
+
 export const tiers = [
   {
     id: "essential",

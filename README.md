@@ -157,9 +157,16 @@ new attribute block in `src/styles.css` plus an entry in `THEMES`.
 
 ## Contact form
 
-`contact-section.tsx` validates name and email in the browser, stores the submission in
-`localStorage` (newest 50, key `liberty-tech-leads`), then surfaces a success state whose
-primary action is a pre-filled WhatsApp message.
+`contact-section.tsx` collects **Name**, **Contact** (phone *or* email — validated for either
+shape, since a customer on a phone is likelier to type a number than an address), **Device**
+and **Service** (chips built from `serviceOptions`: the 8 `services` plus
+`DIAGNOSE` = "Not sure — please diagnose", which is the default), plus a free-text **What is
+wrong**. It validates in the browser, stores the submission in `localStorage` (newest 50, key
+`liberty-tech-leads`), then surfaces a success state whose primary action is a pre-filled
+WhatsApp message.
+
+The WhatsApp body is assembled by `waText` as a labelled block — greeting, blank line, then one
+`Label: value` per line (blank fields are dropped).
 
 **Nothing is sent to a server.** Leads are not emailed, not stored remotely, and not visible
 to the shop — the visitor has to actually tap through to WhatsApp for the enquiry to be
